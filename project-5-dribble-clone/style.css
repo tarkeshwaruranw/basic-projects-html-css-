@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.nav{
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0%;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.searchbox{
+  width: 40%;
+  height: 55%;
+  background-color: rgb(239, 239, 239);
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.searchicon{
+  padding: 7px;
+  border-radius: 50%;
+  background-color: rgb(250, 53, 86);
+  color: white;
+}
+
+.boxright{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.navleft{
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navright{
+  display: flex;
+  width: 20%;
+  justify-content: space-evenly;
+}
+
+.navleft img{
+  height: 100%;
+  /* width: 7%; */
+}
+
+.main {
+  width: 100%;
+  height: 90%;
+  /* background-color: darkcyan; */
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+.card {
+  width: 23%;
+  height: 40%;
+  background-color: red;
+  border-radius: 5%;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.bottom {
+  width: 100%;
+  height: 30%;
+  background-color: black;
+  bottom: -30%;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(transparent,black);
+  transition: all ease 0.5s;
+}
+
+
+.bottom h4 {
+  color: white;
+}
+
+.bottom h3{
+  padding: 1% 1.5%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .bottom{
+  bottom: 0%;
+}
