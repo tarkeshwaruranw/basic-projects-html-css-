@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@font-face{
+@font-face {
   font-family: drib1;
   src: url(./Mona-Sans-870dff5a10221ba7d01cc47eca10d0b2f911bd4196bb941985490bd8c7363cd9.woff2);
 }
-@font-face{
+
+@font-face {
   font-family: drib2;
   src: url(./WFVisualSans-RegularText-46461986901f80620e484e70aa8cbb90ede25a01351d464819a4e47a3f38ea43.woff2);
 }
-@font-face{
+
+@font-face {
   font-family: drib3;
   src: url(./WFVisualSans-SemiBold-aa0e55353b6a1b897f76a0fcbf5561fa243ce1b8b9f6aebcb5a186f0536713b1.woff2);
 }
@@ -24,8 +26,11 @@ html,
 body {
   width: 100%;
   height: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
   /* font-family: "Roboto", sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: drib1;
 }
 
 .nav {
@@ -140,8 +145,9 @@ body {
 }
 
 .section1 {
+  /* padding: 5%; */
   width: 100%;
-  height: 80%;
+  height: 73%;
   /* background-color: red; */
   display: flex;
   padding: 3vh 10vh;
@@ -160,15 +166,16 @@ body {
   font-weight: 550;
   line-height: 1;
 }
-.divleft p{
+
+.divleft p {
   margin: 5% 0;
   font-family: drib1;
   width: 80%;
 }
 
-.options{
+.options {
   /* margin: 5% 0; */
-  
+
   width: 70%;
   display: flex;
   align-items: center;
@@ -177,7 +184,8 @@ body {
   /* justify-content: center; */
 
 }
-.option{
+
+.option {
   background-color: aliceblue;
   padding: 10px 0px;
   margin: 5% 0%;
@@ -215,4 +223,33 @@ body {
 .vid video {
   width: 100%;
   object-fit: cover;
+}
+
+.bottombar {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  margin: 0 5%;
+  padding: 0 2%;
+  border-radius: 15px;
+  background-color: rgba(230, 230, 250, 0.347);
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.box h4 {
+  margin: 10px;
+  padding: 12px;
+  border: 1px solid rgba(117, 132, 130, 0.336);
+  border-radius: 25px;
+  background-color: white;
+  font-weight: 400;
 }
