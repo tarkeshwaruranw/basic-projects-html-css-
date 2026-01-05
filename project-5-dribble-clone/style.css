@@ -57,8 +57,26 @@ body {
   padding: 20px;
 }
 
+
+.search-box {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  /* border-radius: 25px; */
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box:focus {
+  border-color: #007bff;
+}
+
+
 .searchicon {
-  padding: 7px;
+  padding: 7px 9px;
   border-radius: 50%;
   background-color: rgb(250, 53, 86);
   color: white;
@@ -181,6 +199,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  
   /* justify-content: center; */
 
 }
@@ -194,6 +213,14 @@ body {
   display: flex;
   justify-content: center;
   border-radius: 35px;
+    transition: all ease-out 0.4s;
+
+}
+
+.options :hover{
+  background-color: rgb(63, 60, 60);
+  color: white;
+  cursor: pointer;
 }
 
 .searchbar {
@@ -253,3 +280,4 @@ body {
   background-color: white;
   font-weight: 400;
 }
+
