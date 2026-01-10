@@ -21,12 +21,13 @@ main{
 .card{
   border-radius: 12px;
   width: 350px;
-  height: 450px;
+ min-height: 450px;
   background-color: rgb(181, 215, 61);
   padding: 60px 40px;
   padding-bottom: 20px;
   overflow: hidden;
-  /* position: relative; */
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .innerbox{
@@ -34,7 +35,6 @@ main{
   width: 100%;
   height: 100%;
   background-color: aliceblue;
-  position: relative;
 }
 .picture{
   width: 130px;
@@ -42,9 +42,9 @@ main{
   border: 3px solid rgb(225, 197, 103);
   border-radius: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   left: 50%;
-  top: 5%;
+  top: 0;
   overflow: hidden;
 }
 
@@ -56,6 +56,8 @@ main{
 
 
 .card-content{
+  padding: 80px 20px 20px; /* space for avatar */
+  gap: 12px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -65,7 +67,6 @@ main{
 }
 .card-content h3{
   font-size: 33px;
-  margin-top: 18%;
 }
 
 .card-content h4{
@@ -76,11 +77,14 @@ main{
 
 .card-content p{
   font-size: 17px;
-  margin-top: 17%;
   font-weight: 200;
+  line-height: 1.4;
+  color: rgb(91, 88, 88);
   text-align: center;
 }
 .card-content button{
+  cursor: pointer;
+  transition: all 0.3s ease;
   width: 90px;
   height: 30px;
   margin-top: 4%;
@@ -89,4 +93,14 @@ main{
   border: 1px solid greenyellow;
   background-color: rgb(181, 225, 60);
   color: white;
+}
+
+.card-content button:hover {
+  background-color: rgb(160, 200, 40);
+  transform: translateY(-2px);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
