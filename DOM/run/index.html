@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <div id="box" style="width:200px;height:200px;touch-action: manipulation; user-select: none;background:red;">
+    CLICK ME
+  </div>
+
+  <script>
+    console.log("SCRIPT LOADED");
+
+    const box = document.getElementById("box");
+    console.log("BOX:", box);
+
+    // box.addEventListener("click", () => {
+    //   console.log("CLICK WORKED");
+    // });
+
+    let last = 0;
+
+    box.addEventListener("pointerdown", () => {
+      const now = Date.now();
+      if (now - last < 300) {
+        console.log("DOUBLE CLICK 🔥");
+      }
+      last = now;
+    });
+
+  </script>
+
+</body>
+
+</html>
