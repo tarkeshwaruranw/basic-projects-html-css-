@@ -1,0 +1,93 @@
+/* Reset + center */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: whitesmoke;
+}
+
+/* Animatable custom props */
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --glow {
+  syntax: "<number>";
+  initial-value: 0.6;
+  inherits: false;
+}
+
+/* Rotating angle */
+@keyframes borderSpin {
+  from { --rotate: 0deg; }
+  to   { --rotate: 360deg; }
+}
+
+/* Breathing glow */
+@keyframes glowPulse {
+  0%   { --glow: 0.6; }
+  50%  { --glow: 1; }
+  100% { --glow: 0.6; }
+}
+
+.box {
+  width: 220px;
+  padding: 12px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* 🔮 Two-layer background trick */
+  background:
+    linear-gradient(#000, #000) padding-box,
+    conic-gradient(
+      from var(--rotate),
+      #000,
+      #ff007b,
+      #00f7ff,
+      #ff007b,
+      #000
+    ) border-box;
+
+  border: 5px solid transparent;
+
+  /* 🌀 Smooth infinite spin */
+  animation:
+    borderSpin 6s linear infinite,
+    glowPulse 2.5s ease-in-out infinite;
+
+  /* 💡 Neon glow using the animated variable */
+  box-shadow:
+    0 0 calc(10px * var(--glow)) rgba(255, 0, 123, 0.7),
+    0 0 calc(20px * var(--glow)) rgba(0, 247, 255, 0.5),
+    inset 0 0 calc(8px * var(--glow)) rgba(255, 0, 123, 0.4);
+}
+
+/* Content */
+.box img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 🚀 Hover = turbo mode */
+.box:hover {
+  animation:
+    borderSpin 2s linear infinite,
+    glowPulse 1.2s ease-in-out infinite;
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 123, 1),
+    0 0 40px rgba(0, 247, 255, 0.9),
+    inset 0 0 12px rgba(255, 0, 123, 0.6);
+}
